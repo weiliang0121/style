@@ -1,0 +1,39 @@
+{
+  "name": "@iaam/style",
+  "version": "0.0.1",
+  "description": "A style tool library based on d3",
+  "main": "dist/style.cjs.js",
+  "module": "dist/style.esm.js",
+  "browser": "dist/style.umd.js",
+  "scripts": {
+    "build": "rm -rf dist && rollup -c --bundleConfigAsCjs",
+    "dev": "rollup -c -w --bundleConfigAsCjs",
+    "test": "ts-node test/test.ts",
+    "pretest": "npm run build",
+    "prepublish": "npm run build"
+  },
+  "keywords": [
+    "d3-selection",
+    "svg",
+    "attributes",
+    "query"
+  ],
+  "author": "wei.liang",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/d3-selection": "^3.0.8",
+    "rollup": "^4.1.4",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "d3-selection": "^3.0.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}
